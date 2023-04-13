@@ -1,8 +1,10 @@
+import os
 from gettestmail import GetTestMailClient
 
 
 def main():
-  client = GetTestMailClient("YOUR_API_KEY")
+  api_key = os.environ["API_KEY"]
+  client = GetTestMailClient(api_key)
   test_mail = client.create_new()
   print(test_mail.emailAddress)
 
