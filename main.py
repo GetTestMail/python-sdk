@@ -1,14 +1,8 @@
-# python-sdk
-Python SDK for GetTestMail
-
-
-
-```python
-from gettestmail.client import GetTestMailClient
+from gettestmail import GetTestMailClient
 
 
 def main():
-  client = GetTestMailClient("your-api-key")
+  client = GetTestMailClient("YOUR_API_KEY")
   test_mail = client.create_new()
   print(test_mail.emailAddress)
 
@@ -17,4 +11,3 @@ def main():
 
 
 main()
-```
