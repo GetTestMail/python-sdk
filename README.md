@@ -3,6 +3,15 @@ Python SDK for GetTestMail
 
 This Python client library allows you to interact with the GetTestMail API, which provides a simple way to create temporary email addresses and receive messages sent to them.
 
+To use this library, you will need to have a GetTestMail account. If you don't have one, you can sign up for a free [account](https://gettestmail.com).
+
+## Installation
+
+```bash
+pip install gettestmail
+```
+
+
 ## Usage
 
 ```python
@@ -20,6 +29,37 @@ test_mail = client.wait_for_message(test_mail.emailAddress)
 print(test_mail.message)
 
 ```
+
+## Models
+
+### GetTestMail
+
+The GetTestMail model represents a disposable email address. It has the following attributes:
+
+* emailAddress - The email address
+* expiresAt - The time at which the email address will expire
+* message - The message received by the email address
+
+### Message
+
+The Message received by the email address. It has the following attributes:
+
+* id - The id of the message
+* from - The sender of the message
+* to - The recipient of the message
+* subject - The subject of the message
+* text - Text representation of the message
+* html - HTML representation of the message
+* attachments - List of attachments
+
+### Attachment
+
+The Attachment received by the email address. It has the following attributes:
+
+* filename - The filename of the attachment
+* mimeType - The mime type of the attachment
+* content - The content of the attachment
+
 
 ## API Documentation
 
