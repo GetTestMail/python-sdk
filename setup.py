@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="gettestmail",
-    version="1.0.0",
+    version="1.0.1",
     author="Bobby Donchev",
     author_email="support@gettestmail.com",
     description="A Python client library for the GetTestMail API",
