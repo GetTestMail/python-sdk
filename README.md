@@ -25,7 +25,7 @@ test_mail = client.create_new()
 print(test_mail.emailAddress)
 
 # This will wait for a message to be received up until expires_at time
-test_mail = client.wait_for_message(test_mail.emailAddress)
+test_mail = client.wait_for_message(test_mail.id)
 print(test_mail.message)
 
 ```
@@ -36,6 +36,7 @@ print(test_mail.message)
 
 The GetTestMail model represents a disposable email address. It has the following attributes:
 
+* id - The id of the email address
 * emailAddress - The email address
 * expiresAt - The time at which the email address will expire
 * message - The message received by the email address

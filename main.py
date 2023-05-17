@@ -8,7 +8,7 @@ def main():
   test_mail = client.create_new()
   print(test_mail.emailAddress)
 
-  test_mail = client.wait_for_message(test_mail.emailAddress)
+  test_mail = client.wait_for_message(test_mail.id)
   print(test_mail.message)
 
 

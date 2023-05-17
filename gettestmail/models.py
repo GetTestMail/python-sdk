@@ -22,6 +22,7 @@ class Message:
 
 @dataclass
 class GetTestMail:
+    id: str
     emailAddress: str
     expiresAt: str
     message: Optional[Message] = None
